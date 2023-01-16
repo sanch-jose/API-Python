@@ -17,3 +17,4 @@ Finally, I developed tests for the code using Pytest, implemented Docker for the
 - CORS (Cross Origin Resource Sharing)
 - Oauth2
 - JWT token authentication
+- Composite keys
