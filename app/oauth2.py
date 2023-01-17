@@ -1,4 +1,3 @@
-from email.quoprimime import header_check
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from . import schemas, database, models
@@ -8,10 +7,6 @@ from sqlalchemy.orm import Session
 from .config import settings
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl='login')
-
-# SECRET_KEY
-# Algorithm
-# Expiration time
 
 SECRET_KEY = settings.secret_key
 ALGORITHM = settings.algorithm
@@ -32,7 +27,7 @@ def verify_access_token(token: str, credentials_exception):
     try :
 
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        id: str = payload.get("user_id") # type: ignore
+        id: str = payload.get("user_id")
         
 
         if id is None:
