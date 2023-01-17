@@ -3,7 +3,7 @@
 This project consist of a REST API that reflects how a social app works. It simulates a post system, where users can share their message (title + content) and upvote the content they like.
 
 The API has been developed using Python, FastAPI and a PostgreSQL Database. During the development I´ve been using Postman and Pgadmin4 to test the different implementations while developing.
-Finally, I developed tests for the code using Pytest, implemented Docker for the deployment and Github Actions to have a pipeline for CI/CD.
+Finally, I developed tests for the code using Pytest and implemented Docker for the deployment.
 
 ## Features & Tools
 
