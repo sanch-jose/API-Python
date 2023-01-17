@@ -5,14 +5,6 @@ from app import schemas
 from app.config import settings
 
 
-# def test_root(client):
-
-#     res = client.get("/")
-#     print(res.json().get('message'))
-#     assert res.json().get('message') == 'Hello World'
-#     assert res.status_code == 200
-
-
 def test_create_user(client):
     res = client.post(
         "/users/", json={"email": "floro@gmail.com", "password": "password1234"})
@@ -46,4 +38,3 @@ def test_incorrect_login(test_user, client, email, password, status_code):
         "/login", data={"username": email, "password": password})
 
     assert res.status_code == status_code
-    # assert res.json().get('detail') == 'Invalid Credentials'
